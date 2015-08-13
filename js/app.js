@@ -24,26 +24,18 @@ angular.module('myTrip', ['ionic'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
-  $stateProvider.state('home', {
-    url: '/home',
+  $stateProvider
+
+  .state('map', {
+    url: '/map',
     views: {
-      home: {
-        templateUrl: 'home.html'
+      map: {
+        templateUrl: 'map.html'
       }
     }
   })
 
-  $stateProvider.state('help', {
-    url: '/help',
-    views: {
-      help: {
-        templateUrl: 'help.html'
-      }
-    }
-  })
-  
-
-  $urlRouterProvider.otherwise("/");
+  $urlRouterProvider.otherwise('/');
 })
 
 .controller('MyTripCtrl', function($scope, $ionicModal) {

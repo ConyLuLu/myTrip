@@ -21,7 +21,7 @@
       <!-- Center content -->
     <ion-side-menu-content>
       <ion-header-bar class="bar-calm" >
-          <button class="button button-icon icon ion-navicon"></button>
+          <button menu-toggle="left" class="button button-icon icon ion-navicon-round"></button>
         <h1 class="title">MyTrip</h1>
         <!-- New Task button-->
         <button class="button button-icon" ng-click="newTask()">
@@ -50,6 +50,8 @@
           <ion-content class="has-header">
             <a href="settings.html" class="item" menu-close>Settings</a>
             <a href="map.html" class="item" menu-close>My Trip Map</a>
+            <a class="item" ui-sref="map" menu-close>map</a>
+
           </ion-content>
         </ion-side-menu>
 
@@ -69,14 +71,15 @@
         <form ng-submit="createTask(task)">
           <div class="list">
             <label class="item item-input">
+              <span class="input-label">旅程名稱</span>
               <input type="text" placeholder="旅程名稱" ng-model="task.title">
             </label>
             <label class="item item-input">
-              <h3>開始日期</h3>
+              <span class="input-label">開始日期</span>
               <input type="date" ng-model="task.startDate">
             </label>
             <label class="item item-input">
-              <h3>結束日期</h3>
+              <span class="input-label">結束日期</span>
               <input type="date" ng-model="task.endDate">
             </label>
           </div>
@@ -91,6 +94,20 @@
 
     </ion-side-menus>
 
+  </script>
+
+  <script id="map.html" type="text/ng-template">
+    <ion-view title="MyTrip">
+      
+      <ion-header-bar class="bar-calm">
+        <a href="index.html" class="button-icon icon ion-chevron-left"></a>
+        <h1 class="title">MyTrip</h1>
+      </ion-header-bar>
+      <ion-content has-header="true">
+        <li class="item item-divider">我的足跡</li>
+        <img src="map.jpg">
+      </ion-content>
+    </ion-view>
   </script>
 
 
