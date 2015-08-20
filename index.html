@@ -6,165 +6,96 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-
+    <link href="css/style.css" rel="stylesheet">
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+      <!-- cordova script (this will be a 404 during development) -->
+    <!-- <script src="cordova.js"></script> -->
 
     <script src="js/app.js"></script>
   </head>
 
-  <body ng-app="myTrip" ng-controller="MyTripCtrl">
-    <ion-tabs class="tabs-positive">
-      <ion-tab icon="ion-home" ui-sref="mainPage">
-        <ion-nav-view name="mainPage"></ion-nav-view>
-      </ion-tab>
-      <ion-tab icon="ion-help" ui-sref="setting">
-        <ion-nav-view name="setting"></ion-nav-view>
-      </ion-tab>
-      <ion-tab icon="ion-help" ui-sref="maps">
-        <ion-nav-view name="maps"></ion-nav-view>
-      </ion-tab>
-    </ion-tabs>
+   <body ng-app="myTrip" ng-controller="MyTripCtrl">
+    <ion-side-menus>
     
-    <script id="maps.html" type="text/ng-template">
-      <ion-view title="MyTrip">
-        <ion-header-bar class="bar-calm">
-          <a ui-sref="mainPage" class="button-icon icon ion-chevron-left"></a>
-            <h1 class="title">MyTrip</h1>
-        </ion-header-bar>
-
-        <ion-content class="padding has-header" has-header="true">
-          <li class="item item-divider">我的足跡</li>
-          <img src="map.jpg">
-        </ion-content>
-      </ion-view>
-    </script>
-
-    <script id="setting.html" type="text/ng-template">
-      
-      <ion-nav-view title="MyTrip">
-        
-        <ion-header-bar class="bar-calm">
-          <button ui-sref="mainPage" class="button-icon icon ion-chevron-left"></button>
-            <h1 class="title">MyTrip</h1>
-        </ion-header-bar>
-
-        <ion-content has-header="true">
-          <ul class="list">
-            <li class="item item-divider">系統</li>
-            <li class="item item-toggle item-icon-left" href="#">
-              <i class="icon ion-arrow-up-c"></i>
-               自動更新
-               <label class="toggle toggle-calm">
-                 <input type="checkbox">
-                 <div class="track">
-                   <div class="handle"></div>
-                 </div>
-               </label>
-            </li>
-            <li class="item item-divider">一般</li>
-            <a class="icon item item-icon-right" href="#">
-              更改密碼
-              <i class="icon ion-chevron-right"></i>
-            </a>
-            <a class="icon item item-icon-right" href="#">
-              版本
-              <i class="icon ion-chevron-right"></i>
-            </a>
-            <a class="icon item item-icon-right" href="#">
-              關於我們
-              <i class="icon ion-chevron-right"></i>
-            </a>
-            <a class="icon item item-icon-right" href="#">
-              分享
-              <i class="icon ion-chevron-right"></i>
-            </a>
-          </ul>
-        </ion-content>
-      </ion-view>
-
-    </script>
-    <script id="new-task.html" type="text/ng-template">
-      <div class="modal">
-        <!-- Modal header bar -->
-        <ion-header-bar class="bar-secondary">
-          <h1 class="title">New Trip</h1>
-          <button class="button button-clear button-positive" ng-click="closeNewTask()">Cancel</button>
-        </ion-header-bar>
-
-        <!-- Modal content area -->
-        <ion-content>
-
-          <form ng-submit="createTask(task)">
-            <div class="list">
-              <label class="item item-input">
-                <span class="input-label">旅程名稱</span>
-                <input type="text" placeholder="旅程名稱" ng-model="task.title">
-              </label>
-              <label class="item item-input">
-                <span class="input-label">開始日期</span>
-                <input type="date" ng-model="task.startDate">
-              </label>
-              <label class="item item-input">
-                <span class="input-label">結束日期</span>
-                <input type="date" ng-model="task.endDate">
-              </label>
-            </div>
-            <div class="padding">
-              <button type="submit" class="button button-block button-positive">加入旅程</button>
-            </div>
-          </form>
-
-        </ion-content>
-
-      </div>
-
-
-
-    </script>
-
-
-    <script id="mainPage.html" type="text/ng-template">
-      <ion-side-menus>
-          <!-- Center content -->
-        <ion-pane ion-side-menu-content>
-          <ion-header-bar class="bar-calm" >
-            <button menu-toggle="left" class="button button-icon icon ion-navicon-round"></button>
-            <h1 class="title">MyTrip</h1>
-            <!-- New Task button-->
-            <button class="button button-icon" ng-click="newTask()">
-              <i class="icon ion-plus-round"></i>
-            </button>
-          </ion-header-bar>
-          <ion-content>
-            <!-- our list and list items -->
-            <ion-list>
-              <ion-item ng-repeat="task in tasks"
-                  class="item item-thumbnail-left">
-                <img ng-src="{{ task.image }}">
-                <h1>{{ task.title }}</h1>
-                <h4>{{ task.startDate }} ~ {{ task.endDate }}</h4>
-                
-              </ion-item>
-            </ion-list>
-          </ion-content>
-        </ion-pane >
-
-          <!-- Left menu -->
-        <ion-side-menu side="left">
-            <ion-header-bar class="bar bar-header bar-positive">
-              <h1 class="title">Projects</h1>
-            </ion-header-bar>
-            <ion-content class="has-header">
-              <div class="list">
-                <div class="item" ui-sref="maps" menu-close>My Trip Maps</div>
-                <div class="item" ui-sref="setting" menu-close>Settings</div>
-              </div>
+      <!-- Center content -->
+    <ion-side-menu-content>
+      <ion-header-bar class="bar-calm" >
+          <button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
+        <h1 class="title">MyTrip</h1>
+        <!-- New Task button-->
+        <button class="button button-icon" ng-click="newTask()">
+          <i class="icon ion-plus-round"></i>
+        </button>
+      </ion-header-bar>
+      <ion-content>
+        <!-- our list and list items -->
+        <ion-list>
+          <ion-item ng-repeat="task in tasks"
+              class="item item-thumbnail-left">
+            <img ng-src="{{ task.image }}">
+            <h1>{{ task.title }}</h1>
+            <h4>{{ task.startDate }} ~ {{ task.endDate }}</h4>
             
-            </ion-content>
-        </ion-side-menu>
-      </ion-side-menus>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-side-menu-content>
 
-    </script>
+      <!-- Left menu -->
+        <ion-side-menu side="left">
+            <ion-content>
+            <ul class="list">
+            <ion-item href="settings.html" class="item-icon-left" menu-close>
+              <i class="icon ion-gear-a"></i>
+              Settings</ion-item>
+            <ion-item href="map.html" class="item-icon-left" menu-close>
+              <i class="icon ion-map"></i>
+              My Trip Map</ion-item>
+            </ul>
+          </ion-content>
+        </ion-side-menu>
+
+  <script id="new-task.html" type="text/ng-template">
+
+    <div class="modal">
+
+      <!-- Modal header bar -->
+      <ion-header-bar class="bar-secondary">
+        <h1 class="title">New Trip</h1>
+        <button class="button button-clear button-positive" ng-click="closeNewTask()">Cancel</button>
+      </ion-header-bar>
+
+      <!-- Modal content area -->
+      <ion-content>
+
+        <form ng-submit="createTask(task)">
+          <div class="list">
+            <label class="item item-input">
+              <input type="text" placeholder="旅程名稱" ng-model="task.title">
+            </label>
+            <label class="item item-input">
+              <h3>開始日期</h3>
+              <input type="date" ng-model="task.startDate">
+            </label>
+            <label class="item item-input">
+              <h3>結束日期</h3>
+              <input type="date" ng-model="task.endDate">
+            </label>
+          </div>
+          <div class="padding">
+            <button type="submit" class="button button-block button-positive">加入旅程</button>
+          </div>
+        </form>
+
+      </ion-content>
+
+    </div>
+
+    </ion-side-menus>
+
+  </script>
+
 
 </body>
 </html>

@@ -1,37 +1,5 @@
 angular.module('myTrip', ['ionic'])
 
-.config(function($stateProvider, $urlRouterProvider) {
-    $stateProvider
-
-    .state('mainPage', {
-      url: '/mainPage',
-      views: {
-        'mainPage': {
-          templateUrl: 'mainPage.html'
-        }
-      }
-    })
-
-    .state('maps', {
-      url: '/maps',
-      views: {
-        'maps': {
-          templateUrl: 'maps.html'
-        }
-      }
-    })
-
-    .state('setting', {
-      url: '/setting',
-      views: {
-        'setting': {
-          templateUrl: 'setting.html'
-        }
-      }
-    })
-
-  $urlRouterProvider.otherwise('/');
-})
 
 .controller('MyTripCtrl', function($scope, $ionicModal, $state, $ionicHistory) {
   // No need for testing data anymore
