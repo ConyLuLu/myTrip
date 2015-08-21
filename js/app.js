@@ -19,7 +19,8 @@ angular.module('myTrip', ['ionic'])
       title: task.title,
       startDate: task.startDate,
       endDate: task.endDate,
-      image: "travel.jpg"
+      image: "travel.jpg",
+      comment: task.comment
     });
     $scope.taskModal.hide();
     task.title = "";

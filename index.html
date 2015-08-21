@@ -30,7 +30,7 @@
       </ion-header-bar>
       <ion-content>
         <!-- our list and list items -->
-        <ion-list>
+       <!-- <ion-list>
           <ion-item ng-repeat="task in tasks"
               class="item item-thumbnail-left">
             <img ng-src="{{ task.image }}">
@@ -38,7 +38,26 @@
             <h4>{{ task.startDate }} ~ {{ task.endDate }}</h4>
             
           </ion-item>
-        </ion-list>
+        </ion-list> -->
+        <div class="list card" ng-repeat="task in tasks">
+          <div class="item item-icon-right assertive">
+            
+            <i class="button-icon ion-heart"></i>
+            <h2>{{ task.title }}</h2>
+            <p>{{ task.startDate|date:"MMM,d,yyyy"}} ~ {{ task.endDate|date:"MMM,d,yyyy"}}</p>
+          </div>
+
+          <div class="item item-image">
+            <img src="travel2.jpg">
+          </div>
+          
+          <div class="item item-icon-right assertive" href="#">
+             {{task.comment}}
+             
+          </div>
+          
+
+        </div>
       </ion-content>
     </ion-side-menu-content>
 
@@ -73,6 +92,9 @@
           <div class="list">
             <label class="item item-input">
               <input type="text" placeholder="旅程名稱" ng-model="task.title">
+            </label>
+            <label class="item item-input">
+              <input type="text" placeholder="簡短敘述" ng-model="task.comment">
             </label>
             <label class="item item-input">
               <h3>開始日期</h3>
