@@ -40,11 +40,12 @@
           </ion-item>
         </ion-list> -->
         <div class="list card" ng-repeat="task in tasks">
-          <div class="item item-icon-right assertive">
+          <div class="item item-icon-right ">
             
-            <i class="button-icon ion-heart"></i>
+            
             <h2>{{ task.title }}</h2>
             <p>{{ task.startDate|date:"MMM,d,yyyy"}} ~ {{ task.endDate|date:"MMM,d,yyyy"}}</p>
+            <i class="button button-icon icon ion-heart assertive"></i>
           </div>
 
           <div class="item item-image">
