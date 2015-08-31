@@ -1,11 +1,19 @@
-/* Empty. Add your own CSS if you like */
 .avatar{
 	border-radius: 400px;
 }
+
+
+/*-------------Cony--------------*/
 .bar-calm .button-icon {
 	color: white;
 }
-
 #comment {
 	color: gray;
+	font-family: cursive;
+}
+.like {
+	color: #ff0000;
+}
+.like:hover {
+	color: #ff0000;
 }

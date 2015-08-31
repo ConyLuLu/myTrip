@@ -37,8 +37,8 @@
             <div class="list card" ng-repeat="task in tasks">
               <div class="item item-icon-right ">
                 <h2>{{ task.title }}</h2>
-                <p>{{ task.startDate|date:"MMM,d,yyyy"}} - {{ task.endDate|date:"MMM,d,yyyy"}}</p>
-                <i class="button button-icon icon ion-heart assertive"></i>
+                <p>{{ task.startDate|date:"MMM,d,yyyy"}} - {{ task.endDate|date:"MMM,dd,yyyy"}}</p>
+                <i class="button button-icon icon ion-ios-heart" ng-click="like(task)" ng-class="{like:task.like}"></i>
               </div>
               <div class="item item-image">
                 <img src="travel2.jpg">
