@@ -17,3 +17,55 @@
 .like:hover {
 	color: #ff0000;
 }
+.tab-item{
+    margin: 0;
+    line-height: 60px;
+    box-sizing: content-box;
+    font-size: 25px;
+    color:#FFFFFF;
+    opacity: 1;
+    max-width: 250px;
+    border-radius: 50px;
+}
+.l-login{
+    font-size: 18px;
+    line-height: 50px;
+    padding: 0 40px;
+    top:15px;
+    box-sizing: content-box;
+    font-family:'Century Gothic';
+    font-weight: bold; 
+}
+.button-size{
+    font-size: 18px;
+    line-height: 50px;
+    padding: 0 120px;
+    box-sizing: content-box;
+    font-family:'Century Gothic';
+}
+.button-size2{
+    font-size: 18px;
+    line-height: 50px;
+    padding: 0 60px;
+    box-sizing: content-box;
+    font-family:'Century Gothic';
+}
+.f-head{
+     font-size: 28px;
+     font-family:'Century Gothic';
+     font-weight: bold; 
+     color:#616161;
+}
+.f-text{
+    font-size: 18px;
+    color:#616161;
+}
+.f-email{
+    background: #E0E0E0;
+}
+.f-button{
+    font-weight: bold;
+    left:5px;
+    top: 15px;
+    font-size: 15px;
+}
