@@ -68,14 +68,10 @@ angular.module('myTrip', ['ionic','ng-mfb'])
     $scope.taskModal.hide();
   }
 
-  $scope.buttons = [{
-    label: 'a link text',
-    icon: 'ion-paper-airplane'
-  },{
-    label: 'another link',
-    icon: 'ion-plus'
-  },{
-    label: 'a third link',
-    icon: 'ion-paperclip'
-  }];
+  $scope.like = function(task) {
+    if ( task.like == true) 
+      task.like = false;
+    else
+      task.like = true;
+  }
 });
