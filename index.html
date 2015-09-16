@@ -17,11 +17,21 @@
   <body ng-app="myTrip" ng-controller="MyTripCtrl">
       <nav mfb-menu position="br" effect="slidein" label="關閉"
       active-icon="ion-close-round" resting-icon="ion-information"
+<<<<<<< HEAD
       toggling-method="click" class="font-set">
         <button mfb-button icon="ion-settings" label="設定" onclick="location='settings.html'"></button class="font-set">
         <button mfb-button icon="ion-map" label="旅行地圖" onclick="location='map.html'"></button>
       </nav>
       <script src="ng-material-floating-button/src/mfb-directive.js"></script>
+=======
+      toggling-method="click">
+        <button mfb-button icon="ion-settings" label="Settings"></button>
+        <a mfb-button ui-sref="map" icon="ion-map" label="Map" ></a>
+      </nav>
+
+      <script src="ng-material-floating-button/src/mfb-directive.js"></script>      
+      <ion-side-menus>
+>>>>>>> cony
         <!-- Center content -->
           <ion-header-bar class="custom-blue" >
             <h1 class="title color-topic">MyTrip</h1>
@@ -29,6 +39,8 @@
             <button class="button button-icon color-topic" ng-click="newTask()">
               <i class="icon ion-plus-round"></i>
             </button>
+
+
           </ion-header-bar>
           <ion-content class="custom-dark custom-light">
             <div class="list card" ng-repeat="task in tasks">
