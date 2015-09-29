@@ -62,23 +62,22 @@
 .l-login{
     font-size: 18px;
     line-height: 50px;
-    padding: 0 40px;
     top:15px;
     box-sizing: content-box;
     font-family:'Century Gothic';
     font-weight: bold; 
 }
 .button-size{
-    font-size: 18px;
-    line-height: 50px;
-    padding: 0 120px;
+    font-size: 15px;
+    line-height: 30px;
+    padding: 0 250px; 
     box-sizing: content-box;
     font-family:'Century Gothic';
 }
 .button-size2{
-    font-size: 18px;
-    line-height: 50px;
-    padding: 0 60px;
+    font-size: 15px;
+    line-height: 30px;
+    padding: 0 250px; 
     box-sizing: content-box;
     font-family:'Century Gothic';
 }
