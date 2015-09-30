@@ -23,7 +23,7 @@
       </nav>
       <script src="ng-material-floating-button/src/mfb-directive.js"></script>
         <!-- Center content -->
-          <ion-header-bar class="custom-blue" >
+          <ion-header-bar class="custom-blue" align-title="center" >
             <h1 class="title color-topic">MyTrip</h1>
             <!-- New Task button-->
             <button class="button button-icon color-topic" ng-click="newTask()">
@@ -31,7 +31,7 @@
             </button>
           </ion-header-bar>
           <ion-content class="custom-dark custom-light">
-            <div class="list card" ng-repeat="task in tasks">
+            <div class="list card" ng-repeat="task in tasks" show-delete="shouldShowDelete">
               <div class="item item-icon-right">
                 <h2 class="font-setitle">{{ task.title }}</h2>
                 <p class="font-set">{{ task.startDate|date:"MMM,d,yyyy"}} - {{ task.endDate|date:"MMM,dd,yyyy"}}</p>
@@ -52,9 +52,11 @@
         <div class="modal">
 
           <!-- Modal header bar -->
-          <ion-header-bar class="bar-secondary custom-blue">
-            <h1 class="title font-setitle">新增旅程</h1>
-            <button class="button button-clear color-topic" ng-click="closeNewTask()">關閉</button>
+          <ion-header-bar class="bar-secondary custom-blue" align-title="center">
+            <h1 class="title font-setitle color-topic">新增旅程</h1>
+            <button class="button button-clear color-topic" ng-click="closeNewTask()">
+              <div class="color-topic font-regular">關閉</div>
+            </button>
           </ion-header-bar>
 
           <!-- Modal content area -->
