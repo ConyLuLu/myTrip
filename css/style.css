@@ -78,6 +78,18 @@
     box-sizing: content-box;
     font-family:'Century Gothic';
 }
+.a-head{
+     font-size: 28px;
+     font-family:微軟正黑體;
+     font-weight: bold; 
+     color:#616161;
+}
+.a-button{
+    margin: 0;
+    line-height: 60px;
+    box-sizing: content-box;
+    font-size: 28px;
+}
 .f-head{
      font-size: 28px;
      font-family:'Century Gothic';
