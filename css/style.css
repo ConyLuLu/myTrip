@@ -63,21 +63,18 @@
     font-size: 18px;
     line-height: 50px;
     top:15px;
+    padding: 0 20px;
     box-sizing: content-box;
     font-family:'Century Gothic';
     font-weight: bold; 
 }
 .button-size{
-    font-size: 15px;
-    line-height: 30px;
-    padding: 0 250px; 
+    font-size: 13px;
     box-sizing: content-box;
     font-family:'Century Gothic';
 }
 .button-size2{
-    font-size: 15px;
-    line-height: 30px;
-    padding: 0 250px; 
+    font-size: 13px;
     box-sizing: content-box;
     font-family:'Century Gothic';
 }
