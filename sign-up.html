@@ -12,9 +12,9 @@
     <script src="cordova.js"></script>
   </head>
   <body ng-app="myTrip" ng-controller="MyTripCtrl">
-      <ion-header-bar class="bar-calm" >
+      <ion-header-bar class="custom-blue" >
         <button class="button button-icon ion-arrow-left-c" menu-toggle="left" onclick="window.parent.location.href = 'login.html'"></button>
-            <h1 class="title">MyTrip</h1>
+            <h1 class="title color-topic">MyTrip</h1>
             <!-- New Task button-->
         </ion-header-bar>
 
@@ -24,34 +24,34 @@
                 <div class="row"> 
                   <div class="col col 40 ">
                     <label class="item item-input">
-                      <input type="text" placeholder="Username" ng-model="data.username">
+                      <input type="text" placeholder="帳號" ng-model="data.username">
                     </label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col col 33">   
                     <label class="item item-input">
-                      <input type="password" placeholder="Password" ng-model="data.password">
+                      <input type="password" placeholder="密碼" ng-model="data.password">
                     </label>
                   </div>
                 </div>                
                 <div class="row">
                   <div class="col col 33">   
                     <label class="item item-input">
-                      <input type="password" placeholder="confirm password" ng-model="data.password">
+                      <input type="password" placeholder="再次確認密碼" ng-model="data.password">
                     </label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col col 33">   
                     <label class="item item-input">
-                      <input type="text" placeholder="Email" ng-model="data.email">
+                      <input type="text" placeholder="電郵地址" ng-model="data.email">
                     </label>
                   </div>  
                 </div>  
               </div>
               <div class="col text-center">
-                <button class="tab-item button button-assertive" onclick="window.parent.location.href = 'index.html'">Get Start !</button>
+                <button class="tab-item button button-assertive" onclick="window.parent.location.href = 'index.html'">註冊</button>
               </div>       
           </ion-content>
         </ion-view>

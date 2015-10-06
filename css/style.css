@@ -58,6 +58,7 @@
     opacity: 1;
     max-width: 250px;
     border-radius: 50px;
+    font-family:微軟正黑體;
 }
 .l-login{
     font-size: 18px;
@@ -92,19 +93,19 @@
 }
 .f-head{
      font-size: 28px;
-     font-family:'Century Gothic';
+     font-family:微軟正黑體;
      font-weight: bold; 
      color:#616161;
 }
 .f-text{
     font-size: 18px;
     color:#616161;
+    font-family:微軟正黑體;
 }
 .f-email{
     background: #E0E0E0;
 }
 .f-button{
-    font-weight: bold;
     left:5px;
     top: 15px;
     font-size: 15px;
