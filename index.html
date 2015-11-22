@@ -23,7 +23,6 @@
       </nav>
 
       <script src="ng-material-floating-button/src/mfb-directive.js"></script>      
-      <ion-side-menus>
         <!-- Center content -->
         <ion-side-menu-content>
           <ion-header-bar class="bar-calm" >
@@ -33,9 +32,8 @@
             <button class="button button-icon" ng-click="newTask()">
               <i class="icon ion-plus-round"></i>
             </button>
-
-
           </ion-header-bar>
+          
           <ion-content>
             <div class="list card" ng-repeat="task in tasks">
               <div class="item item-icon-right ">
